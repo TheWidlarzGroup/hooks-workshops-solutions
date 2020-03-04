@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ContactData } from "../types/contact.types";
+import { ContactData } from "../../types/contact.types";
 
 interface Props {
   contact: ContactData;
@@ -14,7 +14,9 @@ const Contact = ({ contact }: Props) => {
   return (
     <li style={styles.container}>
       <div style={styles.contactData}>
-        {contact.name.title} {contact.name.first} {contact.name.last}
+        <p>
+          {contact.name.title} {contact.name.first} {contact.name.last}
+        </p>
       </div>
       <div
         style={styles.contactShowMore}
@@ -37,25 +39,25 @@ const Contact = ({ contact }: Props) => {
 
 const styles = {
   container: {
-    width: 500,
     padding: 10,
     marginBottom: 10,
     display: "flex",
     justifyContent: "space-between"
   },
   contactData: {
-    position: "relative" as "relative",
-    display: "inline"
+    position: "relative" as "relative"
   },
   contactShowMore: {
     position: "relative" as "relative",
-    fontSize: 12
+    fontSize: 12,
+    display: "flex",
+    alignItems: "center"
   },
   contactDetails: {
     backgroundColor: "white",
     border: "1px solid black",
     position: "absolute" as "absolute",
-    top: 0,
+    top: "20%",
     right: "100%",
     display: "none",
     padding: 10,
