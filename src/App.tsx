@@ -1,12 +1,12 @@
-import React from "react";
-import "./App.css";
-import Part1 from "./part1/Part1";
+import React from 'react';
+import './App.css';
+import Part2 from './part2/Part2';
 
 function App() {
   return (
     <>
       {/* Solutions for useState tasks */}
-      <Part1 />
+      <Part2 />
       {/* Solutions for X */}
       {/* <X /> */}
     </>
