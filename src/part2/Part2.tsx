@@ -7,16 +7,17 @@ import SearchBar from './components/SearchBar';
 
 const Part2 = () => {
   const [inputValue, setInputValue] = useState('');
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState<ContactData[]>([]);
+
+  const doFetch = async (amount: number) => {
+    const res = await fetch(`https://randomuser.me/api/?results=${amount}`);
+    const json = await res.json();
+    const results = json.results;
+    setContacts(state => [...state, ...results]);
+  };
 
   useEffect(() => {
-    const doFetch = async () => {
-      const res = await fetch('https://randomuser.me/api/?results=5');
-      const json = await res.json();
-      const contacts = json.results;
-      setContacts(contacts);
-    };
-    doFetch();
+    doFetch(5);
   }, []);
 
   const filteredContacts =
@@ -35,7 +36,7 @@ const Part2 = () => {
       <h1 style={styles.titleStyle}>My contacts</h1>
       <SearchBar inputValue={inputValue} setInputValue={setInputValue} />
       <div style={styles.container}>
-        <ContactList contacts={filteredContacts} />
+        <ContactList contacts={filteredContacts} doFetch={doFetch} />
       </div>
     </>
   );
