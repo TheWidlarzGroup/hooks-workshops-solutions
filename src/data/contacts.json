@@ -1,0 +1,189 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": { "title": "Mr", "first": "Maxwell", "last": "Henderson" },
+      "location": {
+        "street": { "number": 3813, "name": "High Street" },
+        "city": "Nottingham",
+        "state": "Lancashire",
+        "country": "United Kingdom",
+        "postcode": "O3V 4FD",
+        "coordinates": { "latitude": "12.8370", "longitude": "-89.3392" },
+        "timezone": {
+          "offset": "-3:00",
+          "description": "Brazil, Buenos Aires, Georgetown"
+        }
+      },
+      "email": "maxwell.henderson@example.com",
+      "login": {
+        "uuid": "a6564990-5829-4526-ac3d-71fa59e3be43",
+        "username": "bluesnake526",
+        "password": "rt6ytere",
+        "salt": "tFiLwkzP",
+        "md5": "d3573b88dfa9c2a1895ec33ce30a301b",
+        "sha1": "0deba05d12f565bb79e39726cfbaba8494b0f092",
+        "sha256": "c5d42b76c22fef7dd2bcfa119b00dd40ad08251270601260e9f976af63dd02d6"
+      },
+      "dob": { "date": "1949-09-16T16:09:58.528Z", "age": 71 },
+      "registered": { "date": "2019-02-09T08:10:08.547Z", "age": 1 },
+      "phone": "015394 55437",
+      "cell": "0751-159-521",
+      "id": { "name": "NINO", "value": "YH 13 09 17 T" },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/65.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/65.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/65.jpg"
+      },
+      "nat": "GB"
+    },
+    {
+      "gender": "male",
+      "name": { "title": "Mr", "first": "رضا", "last": "رضاییان" },
+      "location": {
+        "street": { "number": 163, "name": "شهید مطهری" },
+        "city": "بروجرد",
+        "state": "اصفهان",
+        "country": "Iran",
+        "postcode": 89436,
+        "coordinates": { "latitude": "88.0578", "longitude": "-144.4510" },
+        "timezone": {
+          "offset": "+3:00",
+          "description": "Baghdad, Riyadh, Moscow, St. Petersburg"
+        }
+      },
+      "email": "rd.rdyyn@example.com",
+      "login": {
+        "uuid": "8d52b503-421e-40b3-bc7d-4d5ad3fbd6d2",
+        "username": "beautifulwolf311",
+        "password": "american",
+        "salt": "HKyF9EWU",
+        "md5": "f524a44eb9a40a13d2b89d2d9a713707",
+        "sha1": "6821ebeee701f185c43cd74f8b37fd5b0b7e7661",
+        "sha256": "4b0a52fa7e484b482d15d87a7220819412dc8f672eaf5e3ad990998b7d184e6b"
+      },
+      "dob": { "date": "1961-09-27T05:04:14.556Z", "age": 59 },
+      "registered": { "date": "2013-02-17T05:41:47.088Z", "age": 7 },
+      "phone": "094-07482983",
+      "cell": "0909-887-8814",
+      "id": { "name": "", "value": null },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/88.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/88.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/88.jpg"
+      },
+      "nat": "IR"
+    },
+    {
+      "gender": "female",
+      "name": { "title": "Mrs", "first": "النا", "last": "سلطانی نژاد" },
+      "location": {
+        "street": { "number": 9634, "name": "بلوار کشاورز" },
+        "city": "کرج",
+        "state": "کردستان",
+        "country": "Iran",
+        "postcode": 39002,
+        "coordinates": { "latitude": "2.1764", "longitude": "-48.2088" },
+        "timezone": {
+          "offset": "-4:00",
+          "description": "Atlantic Time (Canada), Caracas, La Paz"
+        }
+      },
+      "email": "ln.sltnynjd@example.com",
+      "login": {
+        "uuid": "1e79876b-6695-47aa-92a1-e4f59e3595cd",
+        "username": "greenwolf971",
+        "password": "272727",
+        "salt": "n6GcwY5F",
+        "md5": "3e76a3b4f5dcd6c3c71e6a3c6fb9d6f7",
+        "sha1": "865319611fbcd2b55a22585a0b738beebfba6416",
+        "sha256": "31db19fc4516be7eb05b141aeafb591c638fa24bdb318aa6d8e01501d8d1c4fa"
+      },
+      "dob": { "date": "1959-02-12T11:48:15.099Z", "age": 61 },
+      "registered": { "date": "2014-05-04T04:20:12.587Z", "age": 6 },
+      "phone": "002-96517680",
+      "cell": "0980-659-5864",
+      "id": { "name": "", "value": null },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/62.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/62.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/62.jpg"
+      },
+      "nat": "IR"
+    },
+    {
+      "gender": "male",
+      "name": { "title": "Mr", "first": "Ben", "last": "Reid" },
+      "location": {
+        "street": { "number": 4793, "name": "Stanley Road" },
+        "city": "Aberdeen",
+        "state": "Norfolk",
+        "country": "United Kingdom",
+        "postcode": "M2 5NA",
+        "coordinates": { "latitude": "-69.0109", "longitude": "-84.6319" },
+        "timezone": { "offset": "+9:30", "description": "Adelaide, Darwin" }
+      },
+      "email": "ben.reid@example.com",
+      "login": {
+        "uuid": "cdd8349e-e97c-4175-9152-d23ab0dc7221",
+        "username": "crazypeacock236",
+        "password": "dinner",
+        "salt": "b4BhGeEu",
+        "md5": "6d1d28a18f346e3b86c25d959b778753",
+        "sha1": "6a7375393eb96dba1837d82214a334d691599e55",
+        "sha256": "0ed9bcfe0349354dd297e7e15cd4a0b1438ed235e2b2e3a48c44185fbbab66b4"
+      },
+      "dob": { "date": "1969-09-30T15:11:59.823Z", "age": 51 },
+      "registered": { "date": "2005-09-12T14:02:59.807Z", "age": 15 },
+      "phone": "016977 72147",
+      "cell": "0710-310-954",
+      "id": { "name": "NINO", "value": "JS 01 44 47 S" },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/61.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/61.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/61.jpg"
+      },
+      "nat": "GB"
+    },
+    {
+      "gender": "female",
+      "name": { "title": "Ms", "first": "Gonca", "last": "Süleymanoğlu" },
+      "location": {
+        "street": { "number": 486, "name": "Atatürk Sk" },
+        "city": "Tunceli",
+        "state": "Çanakkale",
+        "country": "Turkey",
+        "postcode": 39205,
+        "coordinates": { "latitude": "-40.7751", "longitude": "19.9041" },
+        "timezone": { "offset": "-10:00", "description": "Hawaii" }
+      },
+      "email": "gonca.suleymanoglu@example.com",
+      "login": {
+        "uuid": "58229f93-1c0b-4608-9ca2-35ec6ae922a0",
+        "username": "brownelephant619",
+        "password": "bobdole",
+        "salt": "rmT5UgGt",
+        "md5": "629737bbe6172cd90186b8818fce6c8c",
+        "sha1": "6aea5e67f2c3c9ce0df0555147798dc139c8ee8e",
+        "sha256": "28ca35aafc6f63ff01a02d1e7147a790d6a72cd1f4b49e4ce204a437dc47423b"
+      },
+      "dob": { "date": "1987-07-01T17:40:32.387Z", "age": 33 },
+      "registered": { "date": "2017-10-17T14:42:02.271Z", "age": 3 },
+      "phone": "(917)-391-1913",
+      "cell": "(016)-542-3512",
+      "id": { "name": "", "value": null },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/7.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/7.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/7.jpg"
+      },
+      "nat": "TR"
+    }
+  ],
+  "info": {
+    "seed": "b03bf0c06c6d87b8",
+    "results": 5,
+    "page": 1,
+    "version": "1.3"
+  }
+}
