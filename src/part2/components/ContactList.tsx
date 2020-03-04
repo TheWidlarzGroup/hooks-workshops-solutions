@@ -5,9 +5,10 @@ import Contact from './Contact';
 interface Props {
   contacts: ContactData[];
   doFetch: (x: number) => Promise<void>;
+  loading: boolean;
 }
 
-const ContactList = ({ contacts, doFetch }: Props) => {
+const ContactList = ({ contacts, doFetch, loading }: Props) => {
   const loadMoreHandler = () => {
     doFetch(3);
   };
@@ -19,6 +20,7 @@ const ContactList = ({ contacts, doFetch }: Props) => {
           <Contact key={contact.login.uuid} contact={contact} />
         ))}
       </ul>
+      {loading && <div style={styles.loadingDiv}>loading...</div>}
       <button onClick={loadMoreHandler}>Load More</button>
     </Fragment>
   );
@@ -27,6 +29,14 @@ const ContactList = ({ contacts, doFetch }: Props) => {
 const styles = {
   list: {
     padding: 0
+  },
+  loadingDiv: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: 'blue',
+    width: '100%',
+    height: 50
   }
 };
 

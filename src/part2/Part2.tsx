@@ -5,15 +5,21 @@ import SearchBar from './components/SearchBar';
 
 // const contacts: ContactData[] = require('./../data/contacts.json').results;
 
+const sleep = (m: any) => new Promise(r => setTimeout(r, m));
+
 const Part2 = () => {
   const [inputValue, setInputValue] = useState('');
   const [contacts, setContacts] = useState<ContactData[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const doFetch = async (amount: number) => {
+    setLoading(true);
+    await sleep(1000);
     const res = await fetch(`https://randomuser.me/api/?results=${amount}`);
     const json = await res.json();
     const results = json.results;
     setContacts(state => [...state, ...results]);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -36,7 +42,11 @@ const Part2 = () => {
       <h1 style={styles.titleStyle}>My contacts</h1>
       <SearchBar inputValue={inputValue} setInputValue={setInputValue} />
       <div style={styles.container}>
-        <ContactList contacts={filteredContacts} doFetch={doFetch} />
+        <ContactList
+          contacts={filteredContacts}
+          doFetch={doFetch}
+          loading={loading}
+        />
       </div>
     </>
   );
