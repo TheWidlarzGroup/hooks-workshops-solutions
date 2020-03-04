@@ -6,15 +6,17 @@ interface Props {
   contacts: ContactData[];
   doFetch: (x: number) => Promise<void>;
   loading: boolean;
+  error: string;
 }
 
-const ContactList = ({ contacts, doFetch, loading }: Props) => {
+const ContactList = ({ contacts, doFetch, loading, error }: Props) => {
   const loadMoreHandler = () => {
     doFetch(3);
   };
 
   return (
     <Fragment>
+      {error && <div style={styles.errorDiv}>{error}</div>}
       <ul style={styles.list}>
         {contacts.map((contact: ContactData) => (
           <Contact key={contact.login.uuid} contact={contact} />
@@ -37,6 +39,14 @@ const styles = {
     color: 'blue',
     width: '100%',
     height: 50
+  },
+  errorDiv: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: 'red',
+    width: '100%',
+    height: 100
   }
 };
 

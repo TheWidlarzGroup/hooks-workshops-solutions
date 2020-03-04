@@ -11,15 +11,21 @@ const Part2 = () => {
   const [inputValue, setInputValue] = useState('');
   const [contacts, setContacts] = useState<ContactData[]>([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const doFetch = async (amount: number) => {
-    setLoading(true);
-    await sleep(1000);
-    const res = await fetch(`https://randomuser.me/api/?results=${amount}`);
-    const json = await res.json();
-    const results = json.results;
-    setContacts(state => [...state, ...results]);
-    setLoading(false);
+    try {
+      setLoading(true);
+      await sleep(1000);
+      const res = await fetch(`https://randomuser.me/api/?results=${amount}`);
+      const json = await res.json();
+      const results = json.results;
+      setContacts(state => [...state, ...results]);
+    } catch (error) {
+      setError(`We have an ${error}`);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -46,6 +52,7 @@ const Part2 = () => {
           contacts={filteredContacts}
           doFetch={doFetch}
           loading={loading}
+          error={error}
         />
       </div>
     </>
