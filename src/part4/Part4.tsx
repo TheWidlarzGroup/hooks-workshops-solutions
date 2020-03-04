@@ -20,7 +20,11 @@ const Part4 = () => {
   return (
     <>
       <h1 style={styles.titleStyle}>My contacts</h1>
-      <SearchBar inputValue={inputValue} setInputValue={setInputValue} />
+      <SearchBar
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        contacts={contacts}
+      />
       <div style={styles.container}>
         <ContactList contacts={contacts} loading={loading} error={error} />
       </div>
