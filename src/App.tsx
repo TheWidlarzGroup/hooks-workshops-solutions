@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Part1 from "./part1/Part1";
-import Part3LocalStorage from "./part3LocalStorage/Part3LocalStorage";
+import Part3AddSingleFavourite from "./part3AddSingleFavourite/part3AddSingleFavourite";
+import Part3AddFavourites from "./part3AddFavourites/part3AddFavourites";
+import Part3ReusableUseLocalStorage from "./part3ReusableUseLocalStorage/part3ReusableUseLocalStorage";
+import Part3EventListener from "./part3EventListener/Part3EventListener";
 
 function App() {
   return (
     <>
       {/* Solutions for useState tasks */}
       <Part1 />
-      {/* Solutions for custom useLocalStorage hook */}
-      <Part3LocalStorage />
-      {/* Solutions for X */}
-      {/* <X /> */}
+      {/* Solutions for custom useFavouriteContact hook */}
+      {/* <Part3AddSingleFavourite /> */}
+      {/* Solutions for custom useFavouriteContacts hook */}
+      {/* <Part3AddFavourites /> */}
+      {/* Solutions for custom useFavouriteContacts hook */}
+      {/* <Part3ReusableUseLocalStorage /> */}
+      {/* Solutions for event listener */}
+      {/* <Part3EventListener /> */}
     </>
   );
 }
