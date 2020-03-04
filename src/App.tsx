@@ -1,14 +1,14 @@
 import React from "react";
-import { ContactData } from "./types/contact.types";
-import ContactList from "./components/ContactList";
-
-const contacts: ContactData[] = require("./data/contacts.json").results;
+import "./App.css";
+import Part1 from "./part1/Part1";
 
 function App() {
   return (
     <>
-      <h1>My contacts</h1>
-      <ContactList contacts={contacts} />
+      {/* Solutions for useState tasks */}
+      <Part1 />
+      {/* Solutions for X */}
+      {/* <X /> */}
     </>
   );
 }
