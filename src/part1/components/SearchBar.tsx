@@ -12,7 +12,21 @@ const SearchBar = ({ inputValue, setInputValue }: Props) => {
     setInputValue(value);
   };
 
-  return <input value={inputValue} onChange={handleChange} />;
+  return (
+    <input
+      placeholder="Type in the full name"
+      style={styles.input}
+      value={inputValue}
+      onChange={handleChange}
+    />
+  );
+};
+
+const styles = {
+  input: {
+    display: "block",
+    margin: "0 auto"
+  }
 };
 
 export default SearchBar;
