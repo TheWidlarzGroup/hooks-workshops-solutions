@@ -1,17 +1,17 @@
 import React, { Fragment } from 'react';
 import { ContactData } from '../../types/contact.types';
 import Contact from './Contact';
+import { useFetch } from '../hooks/useFetch';
 
 interface Props {
   contacts: ContactData[];
-  doFetch: (x: number) => Promise<void>;
   loading: boolean;
   error: string;
 }
 
-const ContactList = ({ contacts, doFetch, loading, error }: Props) => {
+const ContactList = ({ contacts, loading, error }: Props) => {
   const loadMoreHandler = () => {
-    doFetch(3);
+    //doFetch(3)
   };
 
   return (

@@ -1,36 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ContactList from './components/ContactList';
 import { ContactData } from '../types/contact.types';
 import SearchBar from './components/SearchBar';
 
-// const contacts: ContactData[] = require('./../data/contacts.json').results;
-
-const sleep = (m: any) => new Promise(r => setTimeout(r, m));
+import { useFetch } from './hooks/useFetch';
 
 const Part2 = () => {
   const [inputValue, setInputValue] = useState('');
   const [contacts, setContacts] = useState<ContactData[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
 
-  const doFetch = async (amount: number) => {
-    try {
-      setLoading(true);
-      await sleep(1000);
-      const res = await fetch(`https://randomuser.me/api/?results=${amount}`);
-      const json = await res.json();
-      const results = json.results;
-      setContacts(state => [...state, ...results]);
-    } catch (error) {
-      setError(`We have an ${error}`);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const { response, loading, error } = useFetch(
+    'https://randomuser.me/api/?results=5'
+  );
 
-  useEffect(() => {
-    doFetch(5);
-  }, []);
+  if (contacts.length === 0 && response?.results?.length > 1) {
+    setContacts(response.results);
+  }
 
   const filteredContacts =
     inputValue.length > 0
@@ -50,7 +35,6 @@ const Part2 = () => {
       <div style={styles.container}>
         <ContactList
           contacts={filteredContacts}
-          doFetch={doFetch}
           loading={loading}
           error={error}
         />
