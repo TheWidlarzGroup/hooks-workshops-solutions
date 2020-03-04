@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 interface FullName {
   name: {
@@ -11,8 +11,9 @@ export const useSuggestions = (searchString: string, data: any[]) => {
   const [suggestions, setSuggestions] = useState<any[]>([]);
 
   //   create an array of full names e.g. "John Smith"
-  const fullNameArray = data.map(
-    (elem: FullName) => `${elem.name.first} ${elem.name.last}`
+  const fullNameArray = useMemo(
+    () => data.map((elem: FullName) => `${elem.name.first} ${elem.name.last}`),
+    [data]
   );
 
   useEffect(() => {
@@ -23,7 +24,7 @@ export const useSuggestions = (searchString: string, data: any[]) => {
     });
 
     setSuggestions(suggestionArray);
-  }, [searchString]);
+  }, [searchString, fullNameArray]);
 
   return { suggestions };
 };
